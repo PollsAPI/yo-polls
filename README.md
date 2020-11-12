@@ -8,13 +8,13 @@
 
 ## Deploy on Vercel (1-Click Deploy)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FpollsAPI%2Fyo-polls&env=API_KEY&envDescription=API%20Key%20from%20PollsAPI&envLink=https%3A%2F%2Fwww.pollsapi.com&project-name=pollsapi-yo-polls&repository-name=pollsapi-yo-polls&demo-title=PollsAPI%20Sample%20Application%20%7C%20Yo!%20Polls&demo-description=Sample%20application%20from%20PollsAPI&demo-url=https%3A%2F%2Fyopolls.com&demo-image=https%3A%2F%2Fyopolls.com%2Fyo.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FpollsAPI%2Fyo-polls&env=API_KEY,SITE_URL,SITE_TITLE,SITE_DESCRIPTION&envDescription=API%20Key%20from%20PollsAPI&envLink=https%3A%2F%2Fwww.pollsapi.com&project-name=pollsapi-yo-polls&repository-name=pollsapi-yo-polls&demo-title=PollsAPI%20Sample%20Application%20%7C%20Yo!%20Polls&demo-description=Sample%20application%20from%20PollsAPI&demo-url=https%3A%2F%2Fyopolls.com&demo-image=https%3A%2F%2Fyopolls.com%2Fyo.png)
 -----
 
 ## Getting Started
 
 > Project uses *Environment variable* - **API_KEY**
-> To add it please add `.env` file at the root level and add following
+> To add it please add `.env.local` file at the root level and add following
 > ```
 > API_KEY=<API Key from PollsAPI>
 > ```
@@ -27,11 +27,23 @@ This application is built using [PollsAPI](https://www.pollsapi.com) so to start
 
 1. Login to PollsAPI - https://www.pollsapi.com/login
 2. Once logged in grab your API Key from the Dashboard
-3. Add the key as an `Environment Variable` by creating a `.env` file at the root level.
+3. Add the key as an `Environment Variable` by creating a `.env.local` file at the root level.
+
+### Environment Variables
+
+For SEO and link sharing, you can pass in your Site's URL & other attributes as an environment variable.
+Following env variables can be used -
+
+```
+API_KEY="<PollsAPI Key>"
+SITE_URL="https://www.<MY-DOMAIN>.com"
+SITE_TITLE="My Site Title"
+SITE_DESCRIPTION="Site Description"
+```
 
 ### Development
 
-Once setup with the repo locally and having the `.env` file added, you are all set to go ahead with our local setup.
+Once setup with the repo locally and having the `.env.local` file added, you are all set to go ahead with our local setup.
 
 Run:
 
@@ -63,6 +75,11 @@ This will run the server with debugging available on port `9570`
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+### SEO
+
+For SEO, we have used `next-seo` and created a basic config for SEO.
+You can configure the SEO by updating the file - [utils/seo.js](./utils/seo.js). 
 
 ## Learn More about NextJS
 

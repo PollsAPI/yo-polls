@@ -6,7 +6,8 @@ import { getTwitterLink, getWhatsappLink } from '../utils/share'
 const buildShareText = poll => {
     const host = window.location.origin
     const optionsText = poll.options.map(option => `- *${option.text}*`).join('\n')
-    const pollLink = `${host}/poll/${poll.id}`
+    // Read from environment variable otherwise read the current "origin"
+    const pollLink = process.env.SITE_URL || host
     return `${poll.question}\n\n${optionsText}\n\nVote here 👇\n${pollLink}`
 }
 export const SharePoll = ({ poll }) => {
