@@ -21,14 +21,13 @@ function MyApp({ Component, pageProps }) {
                     <h2 className={'h5 font-weight-light text-center w-75 mx-auto'}>
                         Send polls on WhatsApp, Messenger, Twitter, iMessage, SMS or any other way of text message 😃
                     </h2>
-                    <Button
-                        size="sm"
-                        variant={'dark'}
-                        className={'mx-auto mt-3 d-flex font-weight-bold align-items-center'}
+                    <a
+                        href="https://github.com/PollsAPI/yo-polls"
+                        className={'mx-auto btn btn-sm btn-dark mt-3 d-flex font-weight-bold align-items-center'}
                     >
                         <img src={'/github.svg'} width={20} alt={'github'} className={'mr-2'} />
                         Get it on Github
-                    </Button>
+                    </a>
                     <Component {...pageProps} />
                 </div>
             </div>
