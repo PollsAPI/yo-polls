@@ -3,13 +3,16 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Button from 'react-bootstrap/Button'
 import Toast from 'react-bootstrap/Toast'
 import { getTwitterLink, getWhatsappLink } from '../utils/share'
-
+const buildShareText = poll => {
+    const host = window.location.origin
+    const optionsText = poll.options.map(option => `- *${option.text}*`).join('\n')
+    const pollLink = `${host}/poll/${poll.id}`
+    return `${poll.question}\n\n${optionsText}\n\nVote here 👇\n${pollLink}`
+}
 export const SharePoll = ({ poll }) => {
     const [copied, setCopied] = useState(false)
     if (!poll) return null
-    const text = `${poll.question}\n\n${poll.options
-        .map(option => `- *${option.text}*`)
-        .join('\n')}\n\nVote here 👇\nhttp://localhost:3000/poll/${poll.id}`
+    const text = buildShareText(poll)
     return (
         <div id={'share-poll'} className={'bg-o-warning p-4 rounded'}>
             <h2 className={'text-center font-weight-bold'}>Share poll</h2>
