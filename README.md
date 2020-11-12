@@ -29,17 +29,10 @@ This application is built using [PollsAPI](https://www.pollsapi.com) so to start
 2. Once logged in grab your API Key from the Dashboard
 3. Add the key as an `Environment Variable` by creating a `.env.local` file at the root level.
 
-### Environment Variables
+### Site Config
 
-For SEO and link sharing, you can pass in your Site's URL & other attributes as an environment variable.
-Following env variables can be used -
-
-```
-API_KEY="<PollsAPI Key>"
-SITE_URL="https://www.<MY-DOMAIN>.com"
-SITE_TITLE="My Site Title"
-SITE_DESCRIPTION="Site Description"
-```
+For SEO and link sharing, you can configure your Site's URL, Title, Description & Image attributes.
+You can configure the SEO by updating the file - [site.config.js](./site.config.js).
 
 ### Development
 
@@ -79,7 +72,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 ### SEO
 
 For SEO, we have used `next-seo` and created a basic config for SEO.
-You can configure the SEO by updating the file - [utils/seo.js](./utils/seo.js). 
+Learn more about how to config `next-seo` - https://github.com/garmeeh/next-seo#usage 
 
 ## Learn More about NextJS
 

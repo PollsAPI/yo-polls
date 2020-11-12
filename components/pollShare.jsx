@@ -3,11 +3,12 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Button from 'react-bootstrap/Button'
 import Toast from 'react-bootstrap/Toast'
 import { getTwitterLink, getWhatsappLink } from '../utils/share'
+import { SiteConfig } from '../site.config'
 const buildShareText = poll => {
     const host = window.location.origin
     const optionsText = poll.options.map(option => `- *${option.text}*`).join('\n')
     // Read from environment variable otherwise read the current "origin"
-    const pollLink = process.env.SITE_URL || host
+    const pollLink = SiteConfig.url || host
     return `${poll.question}\n\n${optionsText}\n\nVote here 👇\n${pollLink}`
 }
 export const SharePoll = ({ poll }) => {

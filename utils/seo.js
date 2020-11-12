@@ -1,33 +1,28 @@
-export const SiteTitle = process.env.SITE_TITLE || `Yo! Polls | PollsAPI Demo Application`
-export const SiteDescription =
-    process.env.SITE_DESCRIPTION ||
-    `Create and Share Polls instantly on Whatsapp, Snapchat, Messenger, iMessage and other places with friends. Built using PollsAPI`
+import { SiteConfig } from '../site.config'
+
+export const SiteTitle = SiteConfig.title
+export const SiteDescription = SiteConfig.description
 export const SEO = {
     title: SiteTitle,
     description: SiteDescription,
     openGraph: {
-        url: process.env.SITE_URL,
+        url: SiteConfig.url,
         title: SiteTitle,
         description: SiteDescription,
-        images: [
-            {
-                url:
-                    'https://user-images.githubusercontent.com/812474/98913438-3776a880-247c-11eb-9dd2-cdda3ad4a239.png',
-            },
-        ],
+        images: [{ url: SiteConfig.image }],
     },
     additionalMetaTags: [
         {
             name: 'twitter:url',
-            property: process.env.SITE_URL,
+            property: SiteConfig.url,
         },
         {
             name: 'twitter:description',
-            property: SiteDescription,
+            property: SiteConfig.description,
         },
         {
             name: 'twitter:title',
-            property: SiteTitle,
+            property: SiteConfig.title,
         },
         {
             name: 'twitter:card',
@@ -35,7 +30,7 @@ export const SEO = {
         },
         {
             name: 'twitter:image',
-            property: `https://user-images.githubusercontent.com/812474/98913438-3776a880-247c-11eb-9dd2-cdda3ad4a239.png`,
+            property: SiteConfig.image,
         },
     ],
 }

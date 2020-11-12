@@ -1,5 +1,6 @@
 import '../styles/bootstrap.min.css'
 import '../styles/globals.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 import React from 'react'
 import Image from 'next/image'
 import { DefaultSeo } from 'next-seo'
@@ -8,24 +9,7 @@ import { SEO } from '../utils/seo'
 function MyApp({ Component, pageProps }) {
     return (
         <>
-            <DefaultSeo {...SEO}>
-                <link rel="icon" href="/favicon.ico" />
-                <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-                <meta charSet="utf-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-                <link
-                    rel="preload"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-                    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-                    crossOrigin="anonymous"
-                />
-                <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-                    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-                    crossOrigin="anonymous"
-                />
-            </DefaultSeo>
+            <DefaultSeo {...SEO} />
             <div className={'border-top border-large border-success'}>
                 <div className={'container'}>
                     <h1 className={'display-4 font-weight-bolder my-3 text-success'}>
