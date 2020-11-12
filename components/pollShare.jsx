@@ -8,7 +8,7 @@ const buildShareText = poll => {
     const host = window.location.origin
     const optionsText = poll.options.map(option => `- *${option.text}*`).join('\n')
     // Read from environment variable otherwise read the current "origin"
-    const pollLink = SiteConfig.url || host
+    const pollLink = `${SiteConfig.url || host}/poll/${poll.id}`
     return `${poll.question}\n\n${optionsText}\n\nVote here 👇\n${pollLink}`
 }
 export const SharePoll = ({ poll }) => {
