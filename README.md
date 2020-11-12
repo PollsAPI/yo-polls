@@ -8,7 +8,7 @@
 
 ## Deploy on Vercel (1-Click Deploy)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FpollsAPI%2Fyo-polls&env=API_KEY,SITE_URL,SITE_TITLE,SITE_DESCRIPTION&envDescription=API%20Key%20from%20PollsAPI&envLink=https%3A%2F%2Fwww.pollsapi.com&project-name=pollsapi-yo-polls&repository-name=pollsapi-yo-polls&demo-title=PollsAPI%20Sample%20Application%20%7C%20Yo!%20Polls&demo-description=Sample%20application%20from%20PollsAPI&demo-url=https%3A%2F%2Fyopolls.com&demo-image=https%3A%2F%2Fyopolls.com%2Fyo.png)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FpollsAPI%2Fyo-polls&env=API_KEY,SITE_URL,SITE_TITLE,SITE_DESCRIPTION&envDescription=API%20Key%20from%20PollsAPI&envLink=https%3A%2F%2Fwww.pollsapi.com&project-name=pollsapi-yo-polls&repository-name=pollsapi-yo-polls&demo-title=PollsAPI%20Sample%20Application%20%7C%20Yo!%20Polls&demo-description=Sample%20application%20from%20PollsAPI&demo-url=https%3A%2F%2Fyopolls.com&demo-image=https://user-images.githubusercontent.com/812474/98913438-3776a880-247c-11eb-9dd2-cdda3ad4a239.png)
 -----
 
 ## Getting Started
