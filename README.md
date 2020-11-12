@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">🤟 Yo! Polls</h1>
+<p align="center">Demo polls application created using <strong><a href="https://www.pollsapi.com">PollsAPI</a></strong></p>
+<div style="text-align: center;" align="center">
+  <img align="center" src="https://user-images.githubusercontent.com/812474/98884971-024f6380-2446-11eb-8552-6b0db19719f8.png" />
+</div>
+
 
 ## Getting Started
 
