@@ -1,7 +1,7 @@
 export const SiteTitle = process.env.SITE_TITLE || `Yo! Polls | PollsAPI Demo Application`
 export const SiteDescription =
     process.env.SITE_DESCRIPTION ||
-    `Create and Share Polls instantly on Whatsapp, Snapchat, Messenger, iMessage and more with friends. Built using PollsAPI`
+    `Create and Share Polls instantly on Whatsapp, Snapchat, Messenger, iMessage and other places with friends. Built using PollsAPI`
 export const SEO = {
     title: SiteTitle,
     description: SiteDescription,
