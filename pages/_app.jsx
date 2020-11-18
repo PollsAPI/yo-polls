@@ -5,7 +5,6 @@ import React from 'react'
 import Image from 'next/image'
 import { DefaultSeo } from 'next-seo'
 import { SEO } from '../utils/seo'
-import { Button } from 'react-bootstrap'
 
 function MyApp({ Component, pageProps }) {
     return (
