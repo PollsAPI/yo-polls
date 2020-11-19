@@ -4,6 +4,10 @@ import Button from 'react-bootstrap/Button'
 import Toast from 'react-bootstrap/Toast'
 import { getTwitterLink, getWhatsappLink } from '../utils/share'
 import { SiteConfig } from '../site.config'
+const getPollLink = poll => {
+    const host = window.location.origin
+    return `${SiteConfig.url || host}/poll/${poll.id}`
+}
 const buildShareText = poll => {
     const host = window.location.origin
     const optionsText = poll.options.map(option => `- *${option.text}*`).join('\n')
@@ -18,7 +22,11 @@ export const SharePoll = ({ poll }) => {
     return (
         <div id={'share-poll'} className={'bg-o-warning p-4 rounded'}>
             <h2 className={'text-center font-weight-bold'}>Share poll</h2>
-            <div className={'mt-5'}>
+            <div className="text-center">
+                <a href={getPollLink(poll)}>{getPollLink(poll)}</a>
+            </div>
+
+            <div className={'mt-3'}>
                 <p className={'h4 small mb-2 text-center'}>Copy/Paste the content to any messaging app</p>
                 <pre className={'bg-white w-100 border border-success flex-wrap text-muted p-3'}>{text}</pre>
                 <div className={'d-flex'}>

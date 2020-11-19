@@ -4,7 +4,7 @@ import React from 'react'
 export const Option = ({ voted, selectedOption, setSelectedOption, option, totalVotes }) => {
     const isSelected = option.id === selectedOption
     const icon = isSelected ? 'fa-check-circle' : 'fa-circle'
-    const percentage = Math.round((option.votes_count * 100) / totalVotes)
+    const percentage = Math.round((option.votes_count * 100) / totalVotes) || 0
     return (
         <>
             <div

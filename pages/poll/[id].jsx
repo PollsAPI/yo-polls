@@ -22,7 +22,7 @@ const PollPage = ({ id }) => {
             <div className={'d-flex justify-content-center'}>
                 <div className={'my-4 py-3 col-md-6'}>
                     <Card className={'shadow'} bg={'white'}>
-                        <Card.Body>
+                        <Card.Body className={'mt-5'}>
                             {loading ? (
                                 <div className={'text-center'}>
                                     <Spinner animation={'border'} />
